@@ -1,0 +1,33 @@
+{
+    "name": "suggest",
+    "desc": "Faire une suggestion",
+    "steps": [
+        {
+            "type": "choice",
+            "title": "Suggest | Envoyer une suggestion ?",
+            "message": "Souhaitez-vous faire remonter une suggestion aux developpeurs ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "goto:2"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "addw:n&goto:1"
+                }
+            ]
+        },
+        {
+            "type": "cancel"
+        },
+        {
+            "type": "input",
+            "title": "Suggest | Suggestion",
+            "timedelay": 120000,
+            "message": "Envoyez un message qui explique votre idée !",
+            "action": "adin"
+        }
+    ]
+}

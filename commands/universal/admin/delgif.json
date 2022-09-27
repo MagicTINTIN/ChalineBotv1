@@ -1,0 +1,20 @@
+{
+    "name": "delgif",
+    "desc": "Supprimer des gifs personnalisés",
+    "steps": [
+        {
+            "type": "input",
+            "title": "Delgif | Choix de la ,commande à supprimer",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contient la ,commande à supprimer : écrivez le nom de la commande __sans la virgule (,)__",
+            "action": "adin"
+        },
+        {
+            "type": "input",
+            "title": "Delgif | Raison",
+            "timedelay": 35000,
+            "message": "Décrivez brièvement la raison de la suppression de cette commande",
+            "action": "adin"
+        }
+    ]
+}

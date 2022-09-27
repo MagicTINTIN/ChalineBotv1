@@ -1,0 +1,9 @@
+{
+    "name": "help",
+    "desc": "Tu n'auras pas d'aide avec cette commande...",
+    "steps": [
+        {
+            "type": "end"
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+    "name": "addgif",
+    "desc": "Ajouter des gifs natifs",
+    "steps": [
+        {
+            "type": "input",
+            "title": "Addgif | Choix du nom de la ,commande à créer",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contient le nom de la ,commande à créer : écrivez le nom de la commande __sans la virgule (,) ET en minuscules__",
+            "action": "adin"
+        },
+        {
+            "type": "input",
+            "title": "Addgif | Description",
+            "timedelay": 35000,
+            "message": "Écrivez une courte description",
+            "action": "adip"
+        },
+        {
+            "type": "choice",
+            "title": "Addgif | Catégorie",
+            "message": "Choisissez la catégorie de gif",
+            "choices": [
+                {
+                    "buttoname": "Normal",
+                    "action": "addw:n"
+                },
+                {
+                    "buttoname": "Plus",
+                    "action": "addw:p"
+                },
+                {
+                    "buttoname": "Hard",
+                    "action": "addw:h"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Addgif | Gif",
+            "timedelay": 35000,
+            "message": "Envoyez le lien d'un gif qui sera donné aléatoirement",
+            "action": "adin"
+        },
+        {
+            "type": "choice",
+            "title": "Addgif | Fini ?",
+            "message": "Avez-vous fini ? ou souhaitez-vous ajouter un autre gif ?",
+            "choices": [
+                {
+                    "buttoname": "Fini",
+                    "action": "goto:end"
+                },
+                {
+                    "buttoname": "Ajouter",
+                    "action": "goto:3"
+                }
+            ]
+        }
+    ]
+}

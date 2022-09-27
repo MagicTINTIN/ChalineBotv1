@@ -1,0 +1,13 @@
+{
+    "name": "del",
+    "desc": "Supprimer des messages",
+    "steps": [
+        {
+            "type": "input",
+            "title": "Del | Nombre de messages à supprimer",
+            "timedelay": 20000,
+            "message": "Envoyez le nombre de messages à supprimer (doit être compris entre 1 et 99)\nCela peut ne pas marcher si les messages en question sont trop vieux.",
+            "action": "adin"
+        }
+    ]
+}

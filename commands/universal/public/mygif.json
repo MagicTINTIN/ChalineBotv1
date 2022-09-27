@@ -1,0 +1,9 @@
+{
+    "name": "mygif",
+    "desc": "Affiche des infos sur les commandes personnalisées",
+    "steps": [
+        {
+            "type": "end"
+        }
+    ]
+}

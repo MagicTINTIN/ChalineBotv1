@@ -1,0 +1,76 @@
+{
+    "name": "autoanswer",
+    "desc": "Répondeur automatique pour quand vous êtes afk",
+    "steps": [
+        {
+            "type": "choice",
+            "title": "Répondeur automatique",
+            "message": "Choisissez le mode de fonctionnement",
+            "choices": [
+                {
+                    "buttoname": "Normal",
+                    "action": "goto:1"
+                },
+                {
+                    "buttoname": "Avancé",
+                    "action": "addw:adv&goto:3"
+                },
+                {
+                    "buttoname": "STOP",
+                    "color": "DANGER",
+                    "action": "addw:stop&goto:end"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Répondeur automatique | whitelist",
+            "timedelay": 20000,
+            "message": "Envoyez un message avec les id des personnes qui ne recevront pas le répondeur automatique\nTapez n s'il n'y a personne",
+            "action": "adip"
+        },
+        {
+            "type": "input",
+            "title": "Répondeur automatique | Message",
+            "timedelay": 42000,
+            "message": "Écrivez le message qui sera envoyé",
+            "action": "adin&goto:end"
+        },
+        {
+            "type": "input",
+            "title": "Répondeur automatique | whitelist",
+            "timedelay": 20000,
+            "message": "Envoyez un message avec les id des personnes qui ne recevront pas le répondeur automatique\nTapez n s'il n'y a personne",
+            "action": "adip"
+        },
+        {
+            "type": "input",
+            "title": "Répondeur automatique | ID Server",
+            "timedelay": 15000,
+            "message": "Envoyez l'id du serveur. Si vous voulez définir un autre message pour tous les autres serveurs où se trouve Chaline, écrivez all.\nAttention : vous devez écrire all si vous ne rajoutez pas d'autres serveurs (il doit toujours être défini en dernier) !",
+            "action": "adin"
+        },
+        {
+            "type": "input",
+            "title": "Répondeur automatique | Message",
+            "timedelay": 42000,
+            "message": "Écrivez le message qui sera envoyé sur ce serveur",
+            "action": "adin"
+        },
+        {
+            "type": "choice",
+            "title": "Répondeur automatique | Fini ?",
+            "message": "Avez-vous fini ? ou souhaitez-vous ajouter un autre serveur ?",
+            "choices": [
+                {
+                    "buttoname": "Fini",
+                    "action": "goto:end"
+                },
+                {
+                    "buttoname": "Ajouter",
+                    "action": "addw:|&goto:4"
+                }
+            ]
+        }
+    ]
+}

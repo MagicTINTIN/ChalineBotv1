@@ -1,0 +1,9 @@
+{
+    "name": "gif",
+    "desc": "Avoir des infos sur les gifs",
+    "steps": [
+        {
+            "type": "end"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+{
+    "name": "error",
+    "desc": "Faire remonter une erreur rencontrée",
+    "steps": [
+        {
+            "type": "choice",
+            "title": "Error | Envoyer un rapport d'erreur ?",
+            "message": "Souhaitez-vous faire remonter une erreur ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "goto:2"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "addw:n&goto:1"
+                }
+            ]
+        },
+        {
+            "type": "cancel"
+        },
+        {
+            "type": "input",
+            "title": "Embed | Rapport d'erreur",
+            "timedelay": 120000,
+            "message": "Envoyez un message qui explique votre problème et comment avez-vous eu ce problème (afin que l'on puisse le reproduire pour le réparer)",
+            "action": "adin"
+        }
+    ]
+}

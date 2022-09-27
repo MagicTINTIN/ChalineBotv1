@@ -1,0 +1,197 @@
+{
+    "name": "config",
+    "desc": "Configurez certains paramètres de Chaline sur votre serveur",
+    "steps": [
+        {
+            "type": "choice",
+            "title": "Config | ?",
+            "message": "Choisissez entre lire la configuration actuelle ou écrire une nouvelle configuration",
+            "choices": [
+                {
+                    "buttoname": "Écrire",
+                    "action": "addw:update"
+                },
+                {
+                    "buttoname": "Lire",
+                    "action": "addw:read&goto:end"
+                }
+            ]
+        },
+        {
+            "type": "choice",
+            "title": "Config | Commandes publiques",
+            "message": "Choisissez qui peut utiliser les commandes publiques sur votre serveur : personne, un rôle particulier ou tout le monde",
+            "choices": [
+                {
+                    "buttoname": "Personne",
+                    "action": "addw:n&goto:3",
+                    "color": "DANGER"
+                },
+                {
+                    "buttoname": "Rôle",
+                    "action": "goto:2"
+                },
+                {
+                    "buttoname": "Everyone",
+                    "action": "addw:e&goto:3",
+                    "color": "SUCCESS"
+                }
+            ]
+        },
+        {
+            "type": "roleChoice",
+            "title": "Config | Commandes publiques",
+            "message": "Qui peut utiliser les commandes publiques ?\nChoisissez un rôle",
+            "action": "adrole"
+        },
+        {
+            "type": "choice",
+            "title": "Config | Gif normaux",
+            "message": "Choisissez qui peut utiliser les commandes de gif normaux sur votre serveur : personne, un rôle particulier ou tout le monde",
+            "choices": [
+                {
+                    "buttoname": "Personne",
+                    "action": "addw:n&goto:5",
+                    "color": "DANGER"
+                },
+                {
+                    "buttoname": "Rôle",
+                    "action": "goto:4"
+                },
+                {
+                    "buttoname": "Everyone",
+                    "action": "addw:e&goto:5",
+                    "color": "SUCCESS"
+                }
+            ]
+        },
+        {
+            "type": "roleChoice",
+            "title": "Config | Gif normaux",
+            "message": "Qui peut utiliser les commandes de gifs normaux ?\nChoisissez un rôle",
+            "action": "adrole"
+        },
+        {
+            "type": "choice",
+            "title": "Config | Gifs plus",
+            "message": "Choisissez qui peut utiliser les commandes de gif plus sur votre serveur : personne, un rôle particulier ou tout le monde",
+            "choices": [
+                {
+                    "buttoname": "Personne",
+                    "action": "addw:n&goto:7",
+                    "color": "DANGER"
+                },
+                {
+                    "buttoname": "Rôle",
+                    "action": "goto:6"
+                },
+                {
+                    "buttoname": "Everyone",
+                    "action": "addw:e&goto:7",
+                    "color": "SUCCESS"
+                }
+            ]
+        },
+        {
+            "type": "roleChoice",
+            "title": "Config | Gifs plus",
+            "message": "Qui peut utiliser les commandes de gifs plus ?\nChoisissez un rôle",
+            "action": "adrole"
+        },
+        {
+            "type": "choice",
+            "title": "Config | Gifs hard",
+            "message": "Choisissez qui peut utiliser les commandes de gif hard sur votre serveur : personne, un rôle particulier ou tout le monde",
+            "choices": [
+                {
+                    "buttoname": "Personne",
+                    "action": "addw:n&goto:9",
+                    "color": "DANGER"
+                },
+                {
+                    "buttoname": "Rôle",
+                    "action": "goto:8"
+                },
+                {
+                    "buttoname": "Everyone",
+                    "action": "addw:e&goto:9",
+                    "color": "SUCCESS"
+                }
+            ]
+        },
+        {
+            "type": "roleChoice",
+            "title": "Config | Gifs hard",
+            "message": "Qui peut utiliser les commandes de gifs hard ?\nChoisissez un rôle",
+            "action": "adrole"
+        },
+        {
+            "type": "choice",
+            "title": "Config | Gifs personnalisés du serveur",
+            "message": "Choisissez qui peut utiliser les commandes de gifs personnalisées du serveur : personne, un rôle particulier ou tout le monde",
+            "choices": [
+                {
+                    "buttoname": "Personne",
+                    "action": "addw:n&goto:11",
+                    "color": "DANGER"
+                },
+                {
+                    "buttoname": "Rôle",
+                    "action": "goto:10"
+                },
+                {
+                    "buttoname": "Everyone",
+                    "action": "addw:e&goto:11",
+                    "color": "SUCCESS"
+                }
+            ]
+        },
+        {
+            "type": "roleChoice",
+            "title": "Config | Gifs personnalisés du serveur",
+            "message": "Qui peut utiliser les commandes de gifs personnalisées du serveur ?\nChoisissez un rôle",
+            "action": "adrole"
+        },
+        {
+            "type": "choice",
+            "title": "Config | Réactions",
+            "message": "Souhaitez-vous que Chaline révèle sa personnalité de chat : il pourrait réagir lorsque cela parle de chat ou de lui.\nJuste fun, rien de plus ;)",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "action": "addw:1",
+                    "color": "SUCCESS"
+                },
+                {
+                    "buttoname": "Non",
+                    "action": "addw:0",
+                    "color": "DANGER"
+                }
+            ]
+        },
+        {
+            "type": "choice",
+            "title": "Config | Logs",
+            "message": "Souhaitez-vous que Chaline écrivent des logs pour garder une trace des commandes effectuées ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "action": "nothing",
+                    "color": "SUCCESS"
+                },
+                {
+                    "buttoname": "Non",
+                    "action": "addw:n&goto:end",
+                    "color": "DANGER"
+                }
+            ]
+        },
+        {
+            "type": "channelChoice",
+            "title": "Config | Choisissez un channel de log",
+            "message": "Où est-ce que Chaline écrira ses logs (soyez sûr que ce channel soit muté car ça peut faire des notifs embêtantes)",
+            "timedelay": 60000,
+            "action": "adch"
+        }
+    ]
+}

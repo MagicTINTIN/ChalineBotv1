@@ -1,0 +1,9 @@
+{
+    "name": "meow",
+    "desc": "Lister les commandes disponibles",
+    "steps": [
+        {
+            "type": "end"
+        }
+    ]
+}

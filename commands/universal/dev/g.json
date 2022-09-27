@@ -1,0 +1,20 @@
+{
+    "name": "g",
+    "desc": "Gif perso n'importe où",
+    "steps": [
+        {
+            "type": "input",
+            "title": "G | ID du serveur sur lequel est la commande personnalisée",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contient l'ID du serveur voulu",
+            "action": "adin"
+        },
+        {
+            "type": "input",
+            "title": "G | cmd",
+            "timedelay": 35000,
+            "message": "Envoyez la commande souhaitée (sans la ,)",
+            "action": "adin"
+        }
+    ]
+}

@@ -1,0 +1,70 @@
+{
+    "name": "counter",
+    "desc": "Configurez les channels compteurs de votre serveur",
+    "steps": [
+        {
+            "_step": "0",
+            "type": "choice",
+            "title": "Counter | ?",
+            "message": "Choisissez entre : \nLire la configuration des compteurs actuelle\nAjouter un nouveau compteur\nSupprimer un compteur",
+            "choices": [
+                {
+                    "buttoname": "Ajouter",
+                    "action": "addw:add&goto:2",
+                    "color": "SUCCESS"
+                },
+                {
+                    "buttoname": "Supprimer",
+                    "action": "addw:rem",
+                    "color": "DANGER"
+                },
+                {
+                    "buttoname": "Lire",
+                    "action": "addw:read&goto:end"
+                }
+            ]
+        },
+        {
+            "_step": "1",
+            "type": "menuChoice",
+            "title":"Counter | Suppression d'un compteur",
+            "message": "Choisissez le compteur à supprimer",
+            "choicesList": [
+                {
+                    "name": "Compteur de membres",
+                    "description": "Compte le nombre de membres du serveur",
+                    "action": "addw:totalmembers&goto:end"
+                }
+            ]
+        },
+        {
+            "_step": "2",
+            "type": "menuChoice",
+            "title":"Counter | Ajout d'un compteur",
+            "message": "Choisissez le compteur à ajouter",
+            "choicesList": [
+                {
+                    "name": "Compteur de membres",
+                    "description": "Compte le nombre de membres du serveur",
+                    "action": "addw:totalmembers"
+                }
+            ]
+        },
+        {
+            "_step": "3",
+            "type": "voiceChannelChoice",
+            "title": "Counter | Choisissez le channel",
+            "message": "Choisissez le channel qui changera de nom automatiquement pour afficher le compteur",
+            "timedelay": 60000,
+            "action": "adin"
+        },
+        {
+            "_step": "3",
+            "type": "input",
+            "title": "Counter | Nom du channel",
+            "timedelay": 60000,
+            "message": "Envoyez le nom que portera le channel\n\nÉcrivez $c pour mettre la valeur du compteur\nPar exemple, cela peut se présenter sous la forme\n`Membres: $c`",
+            "action": "adip"
+        }
+    ]
+}

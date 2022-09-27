@@ -1,0 +1,9 @@
+{
+    "name": "chaline",
+    "desc": "Interpeler Chaline",
+    "steps": [
+        {
+            "type": "end"
+        }
+    ]
+}

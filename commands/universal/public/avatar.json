@@ -1,0 +1,28 @@
+{
+    "name": "avatar",
+    "desc": "Afficher des avatars",
+    "steps": [
+        {
+            "type": "choice",
+            "title": "Avatar",
+            "message": "Obtenir l'avatar de",
+            "choices": [
+                {
+                    "buttoname": "Moi",
+                    "action": "goto:end"
+                },
+                {
+                    "buttoname": "Quelqu'un",
+                    "action": "goto:1"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Avatar | de quelqu'un d'autre",
+            "timedelay": 20000,
+            "message": "Mentionnez le dans un message et envoyez ce message",
+            "action": "adin"
+        }
+    ]
+}

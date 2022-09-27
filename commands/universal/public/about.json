@@ -1,0 +1,9 @@
+{
+    "name": "about",
+    "desc": "Plus d'infos sur Chaline",
+    "steps": [
+        {
+            "type": "end"
+        }
+    ]
+}

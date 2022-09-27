@@ -1,0 +1,9 @@
+{
+    "name": "relgif",
+    "desc": "Reload manuellement les gifs",
+    "steps": [
+        {
+            "type": "end"
+        }
+    ]
+}

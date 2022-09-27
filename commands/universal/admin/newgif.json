@@ -1,0 +1,35 @@
+{
+    "name": "newgif",
+    "desc": "Ajouter des gifs personnalisés",
+    "steps": [
+        {
+            "type": "input",
+            "title": "Newgif | Choix du nom de la ,commande à créer",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contient le nom de la ,commande à créer : écrivez le nom de la commande __sans la virgule (,) ET en minuscules__",
+            "action": "adin"
+        },
+        {
+            "type": "input",
+            "title": "Newgif | Gif",
+            "timedelay": 35000,
+            "message": "Envoyez le lien d'un gif qui sera donné aléatoirement",
+            "action": "adin"
+        },
+        {
+            "type": "choice",
+            "title": "Newgif | Fini ?",
+            "message": "Avez-vous fini ? ou souhaitez-vous ajouter un autre gif ?",
+            "choices": [
+                {
+                    "buttoname": "Fini",
+                    "action": "goto:end"
+                },
+                {
+                    "buttoname": "Ajouter",
+                    "action": "goto:1"
+                }
+            ]
+        }
+    ]
+}

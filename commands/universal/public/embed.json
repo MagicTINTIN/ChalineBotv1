@@ -1,0 +1,227 @@
+{
+    "name": "embed",
+    "desc": "Joli message",
+    "steps": [
+        {
+            "type": "input",
+            "title": "Embed | Choix du titre",
+            "timedelay": 30000,
+            "message": "Envoyez un message qui contiendra le titre de votre message",
+            "action": "adip"
+        },
+        {
+            "type": "choice",
+            "title": "Embed | Choix de la couleur",
+            "message": "Souhaitez-vous utiliser une couleur prédéfinie ou une couleur (en code hexadecimal) particulière, ou encore la couleur par défaut",
+            "choices": [
+                {
+                    "buttoname": "Prédéfinie",
+                    "action": "goto:2"
+                },
+                {
+                    "buttoname": "Hexadecimal",
+                    "action": "goto:3"
+                },
+                {
+                    "buttoname": "Défaut",
+                    "action": "addw:n&goto:4"
+                }
+            ]
+        },
+        {
+            "type": "colorChoice",
+            "title": "Embed | Choix de la couleur",
+            "message": "Choisissez une couleur",
+            "action": "adcolor&goto:4"
+        },
+        {
+            "type": "input",
+            "title": "Embed | Choix de la couleur",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contiendra le code hexadecimal de la couleur souhaitée :\nPar exemple, écrivez ff0000 pour du rouge.\n\nPour laisser la couleur par défaut envoyez `n`",
+            "action": "adin"
+        },
+        {
+            "type": "choice",
+            "title": "Embed | Ajout d'une vignette",
+            "message": "Souhaitez-vous ajouter une vignette ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "goto:5"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "addw:n&goto:6"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Embed | Ajout d'une vignette",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contient le lien de l'image à mettre en vignette",
+            "action": "adin"
+        },
+        {
+            "type": "choice",
+            "title": "Embed | Ajout d'une image",
+            "message": "Souhaitez-vous ajouter une image ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "goto:7"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "addw:n&goto:8"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Embed | Ajout d'une image",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contient le lien de l'image",
+            "action": "adin"
+        },
+        {
+            "type": "choice",
+            "title": "Embed | Ajout d'un mini titre",
+            "message": "Souhaitez-vous ajouter un petit titre supplémentaire ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "goto:9"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "addw:n&goto:10"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Embed | Ajout d'un mini titre",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contiendra le mini titre de votre message",
+            "action": "adip"
+        },
+        {
+            "type": "choice",
+            "title": "Embed | Ajout d'un texte",
+            "message": "Souhaitez-vous ajouter un texte ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "goto:11"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "addw:n&goto:12"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Embed | Ajout d'un texte",
+            "timedelay": 60000,
+            "message": "Envoyez un message qui contiendra le texte à envoyer",
+            "action": "adip"
+        },
+        {
+            "type": "choice",
+            "title": "Embed | Ajout d'un choix",
+            "message": "Souhaitez-vous ajouter un choix (pour un sondage par exemple) ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "goto:13"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "addw:n&goto:end"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Embed | Ajout d'un choix",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contiendra le titre du choix",
+            "action": "adip"
+        },
+        {
+            "type": "input",
+            "title": "Embed | Ajout d'un choix",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contiendra une description rapide du choix",
+            "action": "adip"
+        },
+        {
+            "type": "choice",
+            "title": "Embed | Ajout d'un deuxième choix",
+            "message": "Souhaitez-vous ajouter un deuxième choix ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "goto:16"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "addw:n&goto:end"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Embed | Ajout d'un deuxième choix",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contiendra le titre du deuxième choix",
+            "action": "adip"
+        },
+        {
+            "type": "input",
+            "title": "Embed | Ajout d'un deuxième choix",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contiendra une description rapide du deuxième choix",
+            "action": "adip"
+        },
+        {
+            "type": "choice",
+            "title": "Embed | Réagir au message ?",
+            "message": "Souhaitez-vous que le bot réagisse au message (pour que les gens puissent voter par exemple) ?",
+            "choices": [
+                {
+                    "buttoname": "Oui",
+                    "color": "SUCCESS",
+                    "action": "addw:1&goto:19"
+                },
+                {
+                    "buttoname": "Non",
+                    "color": "DANGER",
+                    "action": "goto:end"
+                }
+            ]
+        },
+        {
+            "type": "input",
+            "title": "Embed | Réactions du bot",
+            "timedelay": 25000,
+            "message": "Envoyez un message qui contiendra les 2 emoj avec lesquelles réagir **séparées par un espace**",
+            "action": "adin"
+        }
+    ]
+}

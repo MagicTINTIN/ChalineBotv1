@@ -1,0 +1,9 @@
+{
+    "name": "serverinfo",
+    "desc": "Affiche des infos sur le serveur",
+    "steps": [
+        {
+            "type": "end"
+        }
+    ]
+}
